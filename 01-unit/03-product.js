@@ -3,7 +3,7 @@
 // ==================================================
 function product(num1, num2) {
   if (num1 === undefined) num1=0;
-  if (num2 === undefined) num2=0;
+  if (num2 === undefined) num2=1;
   return num1 * num2;
 }
 
@@ -38,9 +38,9 @@ try {
   // --------------------------------------------------
   // Test Case 4
   // --------------------------------------------------
-  // When invoked with only 1 number, it should return zero.
+  // When invoked with only 1 number, it should return the same number.
   var result = product(2);
-  if (result !== 0) throw new Error('Expected sum(2) to be 0. Received: ' + result);
+  if (result !== 2) throw new Error('Expected sum(2) to be 0. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 5
