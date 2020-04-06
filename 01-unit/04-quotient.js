@@ -3,6 +3,7 @@
 // ==================================================
 function quotient(num1, num2) {
   if (num2 === 0) return 'ERROR';
+  if (num1 === undefined) num1=0;
   if (num2 === undefined) num2=1;
   return num1 / num2;
 }
@@ -43,6 +44,8 @@ try {
   // Test Case 5
   // --------------------------------------------------
   // When invoked with no numbers, it should return 0.
+  var result = quotient();
+  if (result !== 0) throw new Error('Expected quotient() to be 0. Received: ' + result);
 
   console.log('All tests passed successfully.');
 
