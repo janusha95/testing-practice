@@ -6,9 +6,15 @@ function sum(num1, num2) {
   if (num2 === undefined) num2=0;
   return num1 + num2;
 }
+function difference(num1, num2) {
+  if (num1 === undefined) num1=0;
+  if (num2 === undefined) num2=0;
+  return num1 - num2;
+}
 function calc(operation, num1, num2) {
   switch (operation) {
     case 'add' : return sum(num1, num2);
+    case 'subtract' : return difference(num1, num2);
 
   }
 }
@@ -28,6 +34,8 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should return the correct difference when the user provides: 'subtract', 20, 10.
+  var result = calc('subtract', 20, 20);
+  if (result !== 0) throw new Error('Expected calc("subtract", 20, 20) to be 0. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
