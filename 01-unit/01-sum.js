@@ -39,6 +39,15 @@ try {
   var result = sum();
   if (result !== 0) throw new Error('Expected sum(1) to be 1. Received: ' + result);
 
+  // --------------------------------------------------
+  // Test Case 5
+  // --------------------------------------------------
+  // When invoked with a number and a string, it should return concat of number and string.
+  var result = sum(1, "1");
+  if (result === 11) throw new Error('Expected sum(1, "1") to be 11. Received: ' + result);
+  var result = sum("1", 1);
+  if (result === 11) throw new Error('Expected sum("1", 1) to be 11. Received: ' + result);
+
   console.log('All tests passed successfully.');
 
 // ==================================================
