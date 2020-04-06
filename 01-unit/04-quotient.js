@@ -2,7 +2,7 @@
 // DEFINE FUNCTION(S)
 // ==================================================
 function quotient(num1, num2) {
-  if (num2 === 0) num2='ERROR';
+  if (num2 === 0) return 'ERROR';
   return num1 / num2;
 }
 
@@ -22,7 +22,7 @@ try {
   // --------------------------------------------------
   // It should return the text 'ERROR' when the second number is 0.
   var result = quotient(2, 0);
-  if (result === 'ERROR') throw new Error('Expected quotient(2, 0) to be ERROR. Received: ' + result);
+  if (result !== 'ERROR') throw new Error('Expected quotient(2, 0) to be ERROR. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
@@ -35,6 +35,8 @@ try {
   // Test Case 4
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = quotient(2, 2);
+  if (result !== 1) throw new Error('Expected quotient(2, 2) to be 1. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 5
